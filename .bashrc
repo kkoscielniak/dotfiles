@@ -2,8 +2,8 @@
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
-# loading aliases
-source ~/dotfiles/bash/aliases
+# load aliases
+source ~/dotfiles/aliases
 
 # solarized dircolors 
 eval `dircolors ~/dotfiles/mintty/solarized-dircolors.ansi-dark`

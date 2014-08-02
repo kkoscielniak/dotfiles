@@ -5,7 +5,11 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
+alias ls='ls --color'	# always use colors
 alias ll='ls -l'
 alias la='ls -A'
+alias lal='la -l'
 alias l='ls -CF'
-alias ls='ls --color'
+
+# never use vi. only vim.
+alias vi='vim'
