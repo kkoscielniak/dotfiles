@@ -7,6 +7,6 @@ source ~/dotfiles/aliases
 
 source ~/dotfiles/mintty-solarized-dark
 # solarized dircolors 
-eval `dircolors ~/dotfiles/mintty/solarized-dircolors.ansi-dark`
+eval `dircolors ~/dotfiles/mintty-solarized-dark-dircolors`
 
 source ~/dotfiles/bash-prompt
