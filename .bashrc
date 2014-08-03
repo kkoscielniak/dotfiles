@@ -1,3 +1,7 @@
+# Windows Cygwin issues remedy:
+export SHELLOPTS
+set -o igncr
+
 # ls colors
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
@@ -10,3 +14,5 @@ source ~/dotfiles/mintty-solarized-dark
 eval `dircolors ~/dotfiles/mintty-solarized-dark-dircolors`
 
 source ~/dotfiles/bash-prompt
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

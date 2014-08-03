@@ -1,3 +1,11 @@
-# smiley prompt :)
+#!/bin/bash
+
 #PS1="\`if [ \$? = 0 ]; then echo -e '\[\e[01;32m\]\n:)'; else echo -e '\[\e[01;31m\]\n:('; fi\` \[\e[01;34m\]\[\e[00m\]\w[\$(git branch 2>/dev/null | grep '^*' | colrm 1 2)]\$ "
+
+function getCurrentBranch() {
+	local current_branch=$(git branch 2>/dev/null | grep '^*' | colrm 1 2)
+
+}
+#eval 'ruby $(pwd)/test.rb'
+
 PS1="\`if [ \$? = 0 ]; then echo -e '\[\e[01;32m\]\n:)'; else echo -e '\[\e[01;31m\]\n:('; fi\` \[\e[01;34m\]\[\e[00m\]\w\$ "
