@@ -5,7 +5,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
-alias ls='ls --color'	# always use colors
+alias ls='ls -G'	# always use colors
 alias ll='ls -l'
 alias la='ls -A'
 alias lal='la -l'
@@ -13,3 +13,13 @@ alias l='ls -CF'
 
 # never use vi. only vim.
 alias vi='vim'
+
+# This allows me to grep the history without having to write the full command and piping. Fuck, I'm lazy. 
+function h() {
+    if [ -z "$1" ]
+    then
+        history
+    else
+        history | grep "$@"
+    fi
+}
