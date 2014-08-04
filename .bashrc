@@ -1,6 +1,8 @@
-# Windows Cygwin issues remedy:
-export SHELLOPTS
-#set -o igncr
+# Cygwin issues remedy
+# if [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+#     export SHELLOPTS
+#     set -o igncr
+# fi
 
 # ls colors
 export CLICOLOR=1
@@ -9,12 +11,10 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 # load aliases
 source ~/dotfiles/aliases
 
-#source ~/dotfiles/mintty-solarized-dark
-# solarized dircolors 
-#eval `dircolors ~/dotfiles/mintty-solarized-dark-dircolors`
-
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"
 
-PS1="\`if [ \$? = 0 ]; then echo -e '\[\e[01;32m\]\n:)'; else echo -e '\[\e[01;31m\]\n:('; fi\` \[\e[01;34m\]\[\e[00m\]\w\$ "
+# OS X Brew
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
 
+PS1="\`if [ \$? = 0 ]; then echo -e '\[\e[01;32m\]\n:)'; else echo -e '\[\e[01;31m\]\n:('; fi\` \[\e[01;34m\]\[\e[00m\]\w\$ "
