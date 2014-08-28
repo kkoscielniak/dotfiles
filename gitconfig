@@ -3,3 +3,6 @@
 [user]
 	name = Krystian Kościelniak
 	email = krystiankoscielniak@gmail.com
+[alias]
+	s = status
+	l = log

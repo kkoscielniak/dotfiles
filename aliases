@@ -23,3 +23,5 @@ function h() {
         history | grep "$@"
     fi
 }
+
+alias p='pwd'
