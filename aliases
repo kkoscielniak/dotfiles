@@ -36,4 +36,5 @@ function lg() {
 
 alias p='pwd'
 
-alias rm-underscore='find . -name '._*' -exec rm -v {} \;'
+# removes ._ files recursively in OS X
+alias rm-underscores='find . -name '._*' -exec rm -v {} \;'
