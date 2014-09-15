@@ -25,3 +25,5 @@ function h() {
 }
 
 alias p='pwd'
+
+alias rm-underscore='find . -name '._*' -exec rm -v {} \;'
