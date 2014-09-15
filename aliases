@@ -24,6 +24,16 @@ function h() {
     fi
 }
 
+# This allows me to grep listing without piping :) 
+function lg() {
+	if [ -z "$1" ]
+	then
+		ls
+	else
+		ls | grep "$@"
+	fi
+}
+
 alias p='pwd'
 
 alias rm-underscore='find . -name '._*' -exec rm -v {} \;'
