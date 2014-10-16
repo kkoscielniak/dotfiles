@@ -38,3 +38,9 @@ alias p='pwd'
 
 # removes ._ files recursively in OS X
 alias rm-underscores='find . -name '._*' -exec rm -v {} \;'
+
+function title ()
+{
+    TITLE=$*;
+    export PROMPT_COMMAND='echo -ne "\033]0;$TITLE\007"'
+}
