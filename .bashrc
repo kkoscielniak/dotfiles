@@ -18,3 +18,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
 
 PS1="\`if [ \$? = 0 ]; then echo -e '\[\e[01;32m\]\n:)'; else echo -e '\[\e[01;31m\]\n:('; fi\` \[\e[01;34m\]\[\e[00m\]\W\$ "
+
+# the fuck script: https://github.com/nvbn/thefuck 
+alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
+alias FUCK='fuck'
