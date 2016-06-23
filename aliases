@@ -14,7 +14,7 @@ alias l='ls -CF'
 # never use vi. only vim.
 alias vi='vim'
 
-# This allows me to grep the history without having to write the full command and piping. Fuck, I'm lazy. 
+# This allows me to grep the history without having to write the full command and piping. Fuck, I'm lazy.
 function h() {
     if [ -z "$1" ]
     then
@@ -24,7 +24,7 @@ function h() {
     fi
 }
 
-# This allows me to grep listing without piping :) 
+# This allows me to grep listing without piping :)
 function lg() {
 	if [ -z "$1" ]
 	then
@@ -36,11 +36,15 @@ function lg() {
 
 alias p='pwd'
 
-# removes ._ files recursively in OS X
+# removes unnecesary files recursively in OS X
 alias rm-underscores='find . -name '._*' -exec rm -v {} \;'
+alias rm-ds-store='find . -name .DS_Store -exec rm -v {} \;'
 
 function title ()
 {
     TITLE=$*;
     export PROMPT_COMMAND='echo -ne "\033]0;$TITLE\007"'
 }
+
+# funny utils
+alias weather='curl -4 wttr.in'
