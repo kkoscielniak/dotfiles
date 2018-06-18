@@ -1,18 +1,27 @@
 #!/bin/bash
 
+# Install oh-my-zsh 
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+echo "oh-my-zsh installed" 
+
 # Create .profile file (only at the first setup) 
-# echo 'source ~/dotfiles/bashrc' > ~/.profile
-# echo ".profile file created" 
+# echo 'source ~/dotfiles/zshrc' >> ~/.zshrc
+# echo ".zshrc file updated" 
 
 # Link .gitconfig to dotfiles/gitconfig
 rm ~/.gitconfig
 ln -s $PWD/gitconfig ~/.gitconfig
 echo ".gitconfig linked"
 
-# Allow VSCode to use my own .profile file:
-cp bash-login /usr/local/bin/bash-login
-chmod +x /usr/local/bin/bash-login
-echo "VSCode can use /usr/local/bin/bash-login as integrated terminal" 
+# Link .gitconfig to dotfiles/gitconfig
+rm ~/.vimrc
+ln -s $PWD/vimrc ~/.vimrc
+echo ".vimrc linked"
+
+# Allow VSCode to use my zsh config:
+cp zsh-login /usr/local/bin/zsh-login
+chmod +x /usr/local/bin/zsh-login
+echo "VSCode can use /usr/local/bin/zsh-login as integrated terminal"
 
 # Speed up Mission Control
 defaults write com.apple.dock expose-animation-duration -float 0.1
