@@ -1,20 +1,12 @@
-alias ~='cd ~'
-alias cd..='cd ..'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-
-alias ls='ls -G'	# always use colors
 alias ll='ls -l'
 alias la='ls -A'
 alias lal='la -l'
-alias l='ls -CF'
+alias l='ls'
 
 # never use vi. only vim.
 alias vi='vim'
 
-# This allows me to grep the history without having to write the full command and piping. Fuck, I'm lazy.
+# allow to grep the history without having to pipe. Fuck, I'm lazy.
 function h() {
     if [ -z "$1" ]
     then
@@ -24,7 +16,7 @@ function h() {
     fi
 }
 
-# This allows me to grep listing without piping :)
+# allow to grep listing without having to pipe. I said I'm lazy, didn't? 
 function lg() {
 	if [ -z "$1" ]
 	then
@@ -34,17 +26,11 @@ function lg() {
 	fi
 }
 
+# Did I tell you I'm lazy?
 alias p='pwd'
 
-# removes unnecesary files recursively in OS X
-alias rm-underscores='find . -name '._*' -exec rm -v {} \;'
-alias rm-ds-store='find . -name .DS_Store -exec rm -v {} \;'
+# git utils 
+alias git-remove-merged='git branch --merged | egrep -v "(^\*|master|develop)" | xargs git branch -d'
 
-function title ()
-{
-    TITLE=$*;
-    export PROMPT_COMMAND='echo -ne "\033]0;$TITLE\007"'
-}
-
-# funny utils
-alias weather='curl -4 wttr.in'
+# thefuck
+eval $(thefuck --alias)
