@@ -1,0 +1,5 @@
+# Physical Esc mapping (instead of ± key on Macbook Pro with TouchBar)
+0x0A: skhd -k 0x35
+0x3F: skhd -k 0x3B
+0x3B: skhd -k 0x3F
+

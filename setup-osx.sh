@@ -8,15 +8,26 @@ echo "oh-my-zsh installed"
 # echo 'source ~/dotfiles/zshrc' >> ~/.zshrc
 # echo ".zshrc file updated" 
 
-# Link .gitconfig to dotfiles/gitconfig
+# Link config files
 rm ~/.gitconfig
 ln -s $PWD/gitconfig ~/.gitconfig
 echo ".gitconfig linked"
 
-# Link .gitconfig to dotfiles/gitconfig
 rm ~/.vimrc
 ln -s $PWD/vimrc ~/.vimrc
 echo ".vimrc linked"
+
+rm ~/.gvimrc
+ln -s $PWD/gvimrc ~/.gvimrc
+echo ".gvimrc linked" 
+
+rm ~/.yabairc
+ln -s $PWD/yabairc ~/.yabairc
+echo ".yabairc linked" 
+
+rm ~/.skhdrc
+ln -s $PWD/skhdrc ~/.skhdrc
+echo ".skhdrc linked"
 
 # Allow VSCode to use my zsh config:
 cp zsh-login /usr/local/bin/zsh-login
