@@ -1,11 +1,11 @@
 [color]
 	ui = auto
 [user]
-	name = Krystian Kościelniak
+	name = Krystian Kościelniak
 	email = krystiankoscielniak@gmail.com
 [alias]
 	s = status
-	l = log
+	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
 [filter "media"]
 	required = true
 	clean = git media clean %f
@@ -18,3 +18,14 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+	process = git-lfs filter-process
+[core]
+	excludesfile = /Users/krystian/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/krystian/.stCommitMsg
