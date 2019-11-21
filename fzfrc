@@ -1,0 +1,8 @@
+export FZF_DEFAULT_OPTS="--preview='bat --color=always --style=numbers {}'"
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow \
+  --exclude .git \
+  --exclude node_modules \
+  --exclude Library
+'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
