@@ -9,7 +9,7 @@ window:
   padding:
     x: 10
     y: 10
-  decorations: buttonless
+  decorations: transparent
 
 key_bindings:
   - { key: V,        mods: Command,       action: Paste                        }
@@ -23,3 +23,10 @@ cursor:
 dynamic_title: true
 
 live_config_reload: true
+
+shell:
+  program: /bin/zsh
+  args:
+    - -i
+    - -c
+    - tmux
