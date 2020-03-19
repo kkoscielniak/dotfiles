@@ -1,9 +1,11 @@
 export ZSH=/Users/krystian/.oh-my-zsh
+
+LS_COLORS="true"
 DISABLE_AUTO_TITLE="true"
 plugins=(
   git
 )
-
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
 prompt pure
@@ -21,3 +23,4 @@ source ~/dotfiles/fzfrc
 
 source ~/.bashrc
 
+# [[ $TERM != "screen" ]] && exec tmux
