@@ -4,7 +4,7 @@
 	name = Krystian Kościelniak
 	email = krystiankoscielniak@gmail.com
 [alias]
-	s = status
+	s = status -sb
 	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
 [filter "media"]
 	required = true
@@ -23,7 +23,7 @@
 	excludesfile = /Users/krystian/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
