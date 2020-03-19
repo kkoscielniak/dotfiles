@@ -33,3 +33,4 @@ alias reyarn='rm -rf node_modules && yarn cache clean && yarn'
 alias whatport='sudo lsof -i tcp:3000'
 
 alias f="fzf"
+alias mvim="/Applications/MacVim.app/contents/bin/mvim"
