@@ -1,9 +1,17 @@
+##################
+# MacBook Tweaks #
+##################
+
 # Physical Esc mapping (instead of ± key on Macbook Pro with TouchBar)
 0x0A: skhd -k 0x35
 0x3F: skhd -k 0x3B
 0x3B: skhd -k 0x3F
 
-# Move between yabai spaces
+############
+# yabai wm #
+############
+
+# Move between spaces
 alt - 1: yabai -m space --focus 1
 alt - 2: yabai -m space --focus 2
 alt - 3: yabai -m space --focus 3
@@ -11,6 +19,10 @@ alt - 4: yabai -m space --focus 4
 alt - 5: yabai -m space --focus 5
 alt - 6: yabai -m space --focus 6
 cmd + alt - 0: brew services restart yabai
+
+# Toggle space mode between float and bsp
+cmd + alt - space: yabai -m space --layout \
+  $(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "float" else "bsp" end')
 
 # Move between yabai windows
 cmd + alt - h: yabai -m window --focus west
