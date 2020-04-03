@@ -75,3 +75,7 @@ for event in "${events[@]}"; do
   yabai -m signal --add label="${0}_signal_${event}" event="${event}" \
     $(eval "${app_query}}") action="${action}"
 done
+
+
+# assign Electron to a 2nd space
+yabai -m rule --add app="^Electron$" space=2
